@@ -64,11 +64,12 @@ int main(int argc, char** argv) {
 	delete [] b;
 	delete [] c;
     
- 	/* Completar esta sección
-	std::cout << "Elapsed time (ms): " << ____________ << std::endl;
-    std::cout << "Elapsed time per iteration (ms/iter): " <<  _________<< std::endl;
+
+
+	std::cout << "Elapsed time (ms): " << time.elapsed() << std::endl;
+    std::cout << "Elapsed time per iteration (ms/iter): " <<  time.elapsed()/niter<< std::endl;
     std::cout << "Elapsed time per iteration per point (ms/iter/operation): " <<
-       ________ << std::endl;
-	*/
+       time.elapsed()/niter/nx << std::endl;
+	
 }
 
