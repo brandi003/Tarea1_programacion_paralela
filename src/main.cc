@@ -57,7 +57,6 @@ int main(int argc, char** argv) {
       }
     }
     time.stop();
-    std::cout << "Looping " << time.elapsed() << " times."   << std::endl;
 
     
     delete [] a;
