@@ -34,7 +34,7 @@ int main(int argc, char** argv) {
 		}
     }
     a.stop();
-    std::cout << "Looping " << a.Elapsed() << " times."   << std::endl;
+    std::cout << "Looping " << a.elapsed() << " times."   << std::endl;
     std::cout << "Looping " << niter << " times."   << std::endl;
 	std::cout << "Problem size nx is: " << nx << std::endl;
 
