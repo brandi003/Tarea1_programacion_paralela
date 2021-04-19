@@ -23,7 +23,6 @@ int main(int argc, char** argv) {
     timing time;
     ///////////////////////////////////////
     //  Read command-line parameters -nt
-    time.start();
     for (size_t i=0; i < argc; i++) {
         mystr=argv[i];
         if (mystr == "-nt"){
@@ -33,8 +32,6 @@ int main(int argc, char** argv) {
 			nx=atoi(argv[i+1]);
 		}
     }
-    time.stop();
-    std::cout << "Looping " << time.elapsed() << " times."   << std::endl;
     std::cout << "Looping " << niter << " times."   << std::endl;
 	std::cout << "Problem size nx is: " << nx << std::endl;
 
@@ -43,11 +40,14 @@ int main(int argc, char** argv) {
     a = new double[nx];
 	b = new double[nx]; 
 	c = new double[nx];
+    time.start();
     for (size_t i = 0; i < nx; i++) {
       a[i] = 1.0; 
 	  b[i] = 2.0;  
 	  c[i] = 5.0;
     }
+    time.stop();
+    std::cout << "Looping " << time.elapsed() << " times."   << std::endl;
 
 
     /////////////////////////////
