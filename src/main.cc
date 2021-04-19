@@ -40,24 +40,24 @@ int main(int argc, char** argv) {
     a = new double[nx];
 	b = new double[nx]; 
 	c = new double[nx];
-    time.start();
     for (size_t i = 0; i < nx; i++) {
       a[i] = 1.0; 
 	  b[i] = 2.0;  
 	  c[i] = 5.0;
     }
-    time.stop();
-    std::cout << "Looping " << time.elapsed() << " times."   << std::endl;
 
 
     /////////////////////////////
     //  Compute Loop
 	//  Determinar el tiempo de ejecución de este ciclo
+    time.start();
     for (size_t j = 0; j < niter; j++) {
       for (size_t i = 0; i < nx; i++) {
 			a[i] = a[i]*b[i]+c[i];
       }
     }
+    time.stop();
+    std::cout << "Looping " << time.elapsed() << " times."   << std::endl;
 
     
     delete [] a;
