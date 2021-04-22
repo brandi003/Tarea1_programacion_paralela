@@ -19,5 +19,6 @@ los archivos dentro de el proyecto siguen la siguiente estructura:
 			- global.cc
 			- main.cc
 			- Makefile
+		- grafico.png
 		- Makefile
 		- README.txt	
